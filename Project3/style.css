@@ -1,0 +1,24 @@
+
+.sucess,.error {
+    color: white;
+    padding: 5px;
+    margin: 5px 0 15px 0;
+}
+.sucess {
+    background: green;
+}
+.error {
+    background: red;
+}
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box; }
+  .u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box; }
+  .u-pull-right {
+    float: right; }
+  .u-pull-left {
+    float: left; }
+
