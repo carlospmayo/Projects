@@ -1,48 +1,44 @@
 // -------------------------------------------------------
 
 console.log("Inicio");
+
+// agregar libro
+
+// const book = new Books();
+const ui = new UI();
+
 const form = document.querySelector("form");
 const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const isbnInput = document.getElementById("isbn");
-const list = document.querySelector("tr");
+const list = document.getElementById("book-list");
+
 form.addEventListener("submit", runEvent);
 
 function runEvent(e) { 
 
   console.log("Submit");
+  e.preventDefault();
+
   let tempTitle = titleInput.value;
   let tempAuthor = authorInput.value;
   let tempIsbn = isbnInput.value;
 
-  const book = new Books(tempTitle,tempAuthor,tempIsbn);
-  book.addBook();
-  console.log(book);
+  if(tempTitle === "" || tempAuthor === "" || tempIsbn === "") {
+    console.log("llena los campos");
+  }
 
-  e.preventDefault();
-
-
-  document.getElementById("title").value = ""; 
-  document.getElementById("author").value = ""; 
-  document.getElementById("isbn").value = ""; 
+  else {
+    const book = new Books(tempTitle,tempAuthor,tempIsbn);
+    ui.addBook(book);
+    // console.log(book);  
+  }
 }
 
-class Books {
-    constructor(title, author, isbn) {
-      this.title = title;
-      this.author = author;
-      this.isbn = isbn;
-    }
-    addBook() {
+// // borrar libro por libro
+// const bodyNode = document.body;
+// bodyNode.addEventListener("click", handleEvent);
 
-        let newTask = document.createElement("tr");
-        newTask.innerHTML = `
-        <td>${this.title}</td>
-        <td>${this.author}</td>
-        <td>${this.isbn}</td>
-        <td></td>`;
-
-        list.appendChild(newTask); 
-    }
-}
-
+// function handleEvent(e) {
+//     ui.deleteBook();
+// }

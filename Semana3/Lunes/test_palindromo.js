@@ -30,15 +30,14 @@ function convertToLowerCase(pal) {
     for (var i = 0; i < pal.length; i++) {
         var code = pal.charCodeAt(i) 
         if (code > 64 && code < 91) {
-            result += String.fromCharCode(code + 32);
+            result += String.fromCharCode(code + 32)
       } else {      
-        result += pal.charAt(i);
+        result += pal.charAt(i)
       }
     }
     return result
   }
 
-// const pal = "Lamina animal";
+const pal = "Lamina animal";
 // const pal = "ana";
-const pal = "ABBa";
 console.log("Es palindromo: " + isPalindrome(pal));

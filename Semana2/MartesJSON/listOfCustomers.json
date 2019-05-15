@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "carlos ponce",
+        "company": "Enroute",
+        "phone": "22-34-23"
+    },
+    {
+        "id": 2,
+        "name": "diana patron",
+        "company": "Enroute",
+        "phone": "22-45-72"
+    },
+    {
+        "id": 3,
+        "name": "victor vic",
+        "company": "Enroute",
+        "phone": "22-78-98"
+    }
+]

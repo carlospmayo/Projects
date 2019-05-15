@@ -1,7 +1,7 @@
 //-----------------------------------------------
 
 //Inicio 
-
+console.log("Inicio");
 const form = document.querySelector("form");
 const taskInput = document.getElementById("task");
 const list = document.querySelector("ul");
